@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1128" height="191" viewBox="0 0 1128 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1128" height="191" fill="#111111"/>
+  
+  <!-- Grid Pattern (right side) -->
+  <g opacity="0.03">
+    <!-- Vertical lines -->
+    <path d="M564 0V191" stroke="white" stroke-width="1"/>
+    <path d="M584 0V191" stroke="white" stroke-width="1"/>
+    <path d="M604 0V191" stroke="white" stroke-width="1"/>
+    <path d="M624 0V191" stroke="white" stroke-width="1"/>
+    <path d="M644 0V191" stroke="white" stroke-width="1"/>
+    <path d="M664 0V191" stroke="white" stroke-width="1"/>
+    <path d="M684 0V191" stroke="white" stroke-width="1"/>
+    <path d="M704 0V191" stroke="white" stroke-width="1"/>
+    <path d="M724 0V191" stroke="white" stroke-width="1"/>
+    <path d="M744 0V191" stroke="white" stroke-width="1"/>
+    <path d="M764 0V191" stroke="white" stroke-width="1"/>
+    <path d="M784 0V191" stroke="white" stroke-width="1"/>
+    <path d="M804 0V191" stroke="white" stroke-width="1"/>
+    <path d="M824 0V191" stroke="white" stroke-width="1"/>
+    <path d="M844 0V191" stroke="white" stroke-width="1"/>
+    <path d="M864 0V191" stroke="white" stroke-width="1"/>
+    <path d="M884 0V191" stroke="white" stroke-width="1"/>
+    <path d="M904 0V191" stroke="white" stroke-width="1"/>
+    <path d="M924 0V191" stroke="white" stroke-width="1"/>
+    <path d="M944 0V191" stroke="white" stroke-width="1"/>
+    <path d="M964 0V191" stroke="white" stroke-width="1"/>
+    <path d="M984 0V191" stroke="white" stroke-width="1"/>
+    <path d="M1004 0V191" stroke="white" stroke-width="1"/>
+    <path d="M1024 0V191" stroke="white" stroke-width="1"/>
+    <path d="M1044 0V191" stroke="white" stroke-width="1"/>
+    <path d="M1064 0V191" stroke="white" stroke-width="1"/>
+    <path d="M1084 0V191" stroke="white" stroke-width="1"/>
+    <path d="M1104 0V191" stroke="white" stroke-width="1"/>
+    <path d="M1124 0V191" stroke="white" stroke-width="1"/>
+    
+    <!-- Horizontal lines -->
+    <path d="M564 0H1128" stroke="white" stroke-width="1"/>
+    <path d="M564 20H1128" stroke="white" stroke-width="1"/>
+    <path d="M564 40H1128" stroke="white" stroke-width="1"/>
+    <path d="M564 60H1128" stroke="white" stroke-width="1"/>
+    <path d="M564 80H1128" stroke="white" stroke-width="1"/>
+    <path d="M564 100H1128" stroke="white" stroke-width="1"/>
+    <path d="M564 120H1128" stroke="white" stroke-width="1"/>
+    <path d="M564 140H1128" stroke="white" stroke-width="1"/>
+    <path d="M564 160H1128" stroke="white" stroke-width="1"/>
+    <path d="M564 180H1128" stroke="white" stroke-width="1"/>
+  </g>
+  
+  <!-- Logo Placeholder (circle) -->
+  <circle cx="60" cy="95" r="30" fill="white"/>
+  
+  <!-- Company Name -->
+  <text x="120" y="105" font-family="Inter, sans-serif" font-size="36" font-weight="400" fill="white" letter-spacing="-0.5">SYNTHARA</text>
+  
+  <!-- Tagline -->
+  <text x="120" y="135" font-family="Inter, sans-serif" font-size="16" fill="#e0e0e0">Clean design. No visual noise. Absolute simplicity.</text>
+</svg>

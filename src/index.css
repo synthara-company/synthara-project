@@ -1,0 +1,437 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scrolling */
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-primary);
+  font-weight: 500;
+}
+
+/* Refined styling - Cleaner, more harmonious visual experience */
+.aggressive-card {
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.2s ease;
+}
+
+.aggressive-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.aggressive-button {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-weight: 500;
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+  font-size: 0.875rem;
+}
+
+.aggressive-button:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.aggressive-input {
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 0.5rem;
+  font-weight: 400;
+  transition: border-color 0.15s ease;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+}
+
+.aggressive-input:focus {
+  border-color: var(--color-text-secondary);
+  outline: none;
+}
+
+/* Refined Theme Variables - Cleaner, more harmonious visual experience */
+:root {
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  /* Light theme colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f9fafb;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #9ca3af;
+  --color-border: #e5e7eb;
+
+  /* Shadows - more subtle */
+  --shadow-light: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-medium: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-strong: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+/* Theme Mode Variables - Refined for cleaner, more harmonious visual experience */
+.dark {
+  --color-bg-primary: #080808;
+  --color-bg-secondary: #111111;
+  --color-text-primary: #f9fafb;
+  --color-text-secondary: #e5e7eb;
+  --color-text-tertiary: #9ca3af;
+  --color-border: #1f2937;
+  --shadow-light: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-strong: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.dim {
+  --color-bg-primary: #1f2937;
+  --color-bg-secondary: #374151;
+  --color-text-primary: #f9fafb;
+  --color-text-secondary: #e5e7eb;
+  --color-text-tertiary: #9ca3af;
+  --color-border: #4b5563;
+  --shadow-light: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-strong: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.gold {
+  --color-bg-primary: #F9E5C9;
+  --color-bg-secondary: #F3DDB9;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #9ca3af;
+  --color-border: #D6A756;
+  --shadow-light: 0 1px 2px rgba(214, 167, 86, 0.1);
+  --shadow-medium: 0 2px 4px rgba(214, 167, 86, 0.15);
+  --shadow-strong: 0 4px 6px rgba(214, 167, 86, 0.2);
+}
+
+.blue {
+  --color-bg-primary: #c2d3e0;
+  --color-bg-secondary: #b3c9d9;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-tertiary: #9ca3af;
+  --color-border: #8aa5b9;
+  --shadow-light: 0 1px 2px rgba(138, 165, 185, 0.1);
+  --shadow-medium: 0 2px 4px rgba(138, 165, 185, 0.15);
+  --shadow-strong: 0 4px 6px rgba(138, 165, 185, 0.2);
+}
+
+/* Base Typography - Refined for cleaner, more harmonious visual experience */
+body {
+  font-family: var(--font-primary);
+  font-size: 1rem; /* Standardized base font size */
+  line-height: 1.5; /* Standardized line height */
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em; /* Subtle letter spacing */
+  font-weight: 400; /* Regular weight for body text */
+}
+
+/* Apply background colors for different modes */
+.dim body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+.dark body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+.gold body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+.blue body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Typography Styles - Refined for cleaner, more harmonious visual experience */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 500; /* Reduced from 600 for more subtle hierarchy */
+  line-height: 1.3; /* Standardized line height */
+  letter-spacing: -0.01em; /* Subtle letter spacing for headings */
+}
+
+h1 {
+  font-size: 1.5rem; /* Simplified size */
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5; /* Standardized line height */
+  font-weight: 400; /* Regular weight for body text */
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.15s ease; /* Slightly faster transition */
+}
+
+button {
+  font-family: var(--font-primary);
+  font-size: 0.875rem; /* Standardized button text size */
+  font-weight: 400; /* Regular weight for buttons */
+}
+
+  /* Header styles - Refined for cleaner, more focused interface */
+  header {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  header nav {
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: var(--color-bg-primary);
+    padding: 1.5rem;
+    box-shadow: -1px 0 5px rgba(0, 0, 0, 0.05);
+    transition: right 0.25s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  header nav.menu-open {
+    right: 0;
+  }
+
+  /* Header nav elements - Refined for cleaner interface */
+  header nav button,
+  header nav a {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    width: 100%;
+    text-align: left;
+    color: var(--color-text-primary);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem 0;
+    font-weight: 400;
+  }
+
+  header nav a {
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .grid-cols-1 {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .grid-cols-1 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    header nav {
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      background-color: transparent;
+      padding: 0;
+      box-shadow: none;
+    }
+
+    header nav button,
+    header nav a {
+      margin-bottom: 0;
+      width: auto;
+    }
+
+    header nav a {
+      color: #1f2937;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+  }
+
+  /* Post styles - Refined for cleaner, more harmonious visual experience */
+  .post {
+    margin-bottom: 0.75rem;
+  }
+
+  .post h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .post p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+  }
+
+  /* Form styles - Refined for cleaner, more focused interface */
+  .post-form input,
+  .post-form textarea {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.25rem;
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.875rem;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    transition: border-color 0.15s ease;
+  }
+
+  .post-form input:focus,
+  .post-form textarea:focus {
+    outline: none;
+    border-color: var(--color-text-secondary);
+  }
+
+  .post-form button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    transition: all 0.15s ease;
+  }
+
+  .post-form button:hover {
+    border-color: var(--color-text-secondary);
+  }
+
+  .modal-backdrop {
+    z-index: 1000;
+  }
+
+  /* Modal styles - Refined for cleaner, more focused interface */
+  .modal-content {
+    max-width: 90%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-bg-primary);
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    position: relative;
+    max-width: 100%;
+  }
+
+  .modal-content h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-content p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+  }
+
+  .menu-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  /* Simplified responsive typography - reduced visual noise */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    .post h3 {
+        font-size: 1rem;
+    }
+
+    .post p, .modal-content p {
+        font-size: 0.875rem;
+    }
+
+    .post-form button {
+        font-size: 0.75rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 769px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .post h3 {
+        font-size: 1.125rem;
+    }
+
+    .post p, .modal-content p {
+        font-size: 1rem;
+    }
+
+    .post-form button {
+        font-size: 0.875rem;
+    }
+
+    .modal-content h2 {
+        font-size: 1.25rem;
+    }
+}

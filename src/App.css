@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+  background-color: #f0f0f0; /* Updated to a lighter background */
+  color: #333; /* Updated text color for better contrast */
+}
+
+.App-header {
+  background-color: #ffffff; /* Updated to a lighter header background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 2vmin); /* Increased font size for better readability */
+  color: #333; /* Updated text color for better contrast */
+}
+
+.App-link {
+  color: #007bff; /* Updated link color for a fresh look */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

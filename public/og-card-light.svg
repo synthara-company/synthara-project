@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="white"/>
+  
+  <!-- Synthara Logo -->
+  <g transform="translate(400, 250)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="black">SYNTHARA</text>
+  </g>
+  
+  <!-- Tagline -->
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="32" font-weight="normal" text-anchor="middle" fill="black">Clean, harmonious visual experiences</text>
+  <text x="600" y="400" font-family="Arial, sans-serif" font-size="32" font-weight="normal" text-anchor="middle" fill="black">with no noise or redundancy</text>
+</svg>

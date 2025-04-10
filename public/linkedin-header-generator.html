@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthara LinkedIn Header Generator</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    h1 {
+      font-weight: 400;
+      margin-bottom: 30px;
+    }
+    
+    .canvas-container {
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    canvas {
+      max-width: 100%;
+    }
+    
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 500px;
+    }
+    
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+    
+    label {
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+    
+    input, select {
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #000;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.2s;
+    }
+    
+    button:hover {
+      background-color: #333;
+    }
+    
+    .download-link {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #000;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    
+    .download-link:hover {
+      background-color: #333;
+    }
+    
+    .theme-options {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .theme-option {
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    
+    .theme-option.active {
+      border-color: #000;
+    }
+    
+    .theme-light {
+      background-color: white;
+    }
+    
+    .theme-dim {
+      background-color: #1f2937;
+    }
+    
+    .theme-dark {
+      background-color: #111111;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Synthara LinkedIn Header Generator</h1>
+    
+    <div class="canvas-container">
+      <canvas id="headerCanvas" width="1128" height="191"></canvas>
+    </div>
+    
+    <div class="controls">
+      <div class="control-group">
+        <label>Theme:</label>
+        <div class="theme-options">
+          <div class="theme-option theme-light active" data-theme="light"></div>
+          <div class="theme-option theme-dim" data-theme="dim"></div>
+          <div class="theme-option theme-dark" data-theme="dark"></div>
+        </div>
+      </div>
+      
+      <div class="control-group">
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" value="SYNTHARA" />
+      </div>
+      
+      <div class="control-group">
+        <label for="tagline">Tagline:</label>
+        <input type="text" id="tagline" value="Clean design. No visual noise. Absolute simplicity." />
+      </div>
+      
+      <button id="generateBtn">Generate Header</button>
+    </div>
+    
+    <a id="downloadLink" class="download-link" download="synthara-linkedin-header.png">Download Header Image</a>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const canvas = document.getElementById('headerCanvas');
+      const ctx = canvas.getContext('2d');
+      const companyNameInput = document.getElementById('companyName');
+      const taglineInput = document.getElementById('tagline');
+      const generateBtn = document.getElementById('generateBtn');
+      const downloadLink = document.getElementById('downloadLink');
+      const themeOptions = document.querySelectorAll('.theme-option');
+      
+      let currentTheme = 'light';
+      
+      // Theme colors
+      const themes = {
+        light: {
+          background: '#ffffff',
+          text: '#000000',
+          tagline: '#555555',
+          grid: '#000000'
+        },
+        dim: {
+          background: '#1f2937',
+          text: '#ffffff',
+          tagline: '#e5e7eb',
+          grid: '#ffffff'
+        },
+        dark: {
+          background: '#111111',
+          text: '#ffffff',
+          tagline: '#e0e0e0',
+          grid: '#ffffff'
+        }
+      };
+      
+      // Set active theme
+      themeOptions.forEach(option => {
+        option.addEventListener('click', function() {
+          themeOptions.forEach(opt => opt.classList.remove('active'));
+          this.classList.add('active');
+          currentTheme = this.dataset.theme;
+          generateHeader();
+        });
+      });
+      
+      // Generate header
+      function generateHeader() {
+        const theme = themes[currentTheme];
+        const companyName = companyNameInput.value;
+        const tagline = taglineInput.value;
+        
+        // Clear canvas
+        ctx.fillStyle = theme.background;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw grid pattern on right side
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(canvas.width / 2, 0, canvas.width / 2, canvas.height);
+        ctx.clip();
+        
+        ctx.strokeStyle = theme.grid;
+        ctx.lineWidth = 1;
+        ctx.globalAlpha = 0.03;
+        
+        // Vertical lines
+        for (let x = 0; x <= canvas.width; x += 20) {
+          ctx.beginPath();
+          ctx.moveTo(x, 0);
+          ctx.lineTo(x, canvas.height);
+          ctx.stroke();
+        }
+        
+        // Horizontal lines
+        for (let y = 0; y <= canvas.height; y += 20) {
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(canvas.width, y);
+          ctx.stroke();
+        }
+        
+        ctx.restore();
+        ctx.globalAlpha = 1;
+        
+        // Draw company name
+        ctx.fillStyle = theme.text;
+        ctx.font = '36px Inter, sans-serif';
+        ctx.textAlign = 'left';
+        ctx.fillText(companyName, 120, 95);
+        
+        // Draw tagline
+        ctx.fillStyle = theme.tagline;
+        ctx.font = '16px Inter, sans-serif';
+        ctx.fillText(tagline, 120, 125);
+        
+        // Update download link
+        updateDownloadLink();
+      }
+      
+      // Update download link
+      function updateDownloadLink() {
+        const dataUrl = canvas.toDataURL('image/png');
+        downloadLink.href = dataUrl;
+      }
+      
+      // Generate header on button click
+      generateBtn.addEventListener('click', generateHeader);
+      
+      // Generate initial header
+      generateHeader();
+    });
+  </script>
+</body>
+</html>
