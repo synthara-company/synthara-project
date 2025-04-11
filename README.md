@@ -1,114 +1,128 @@
 # Synthara Project
 
-Synthara is an AI-powered platform that provides visual and content analysis, along with clean, harmonious experiences. It offers features such as blog post creation, AI image analysis, AI audio analysis, AI video analysis, YouTube video analysis, Llama4 Maverick integration, voice assistant functionality, multiple theme support, API endpoints for content processing, Google Gemini API integration, server infrastructure, and more.
+[![Synthara Logo](https://raw.githubusercontent.com/synthara-company/synthara-project/main/public/logo.png)](https://synthara-prod.vercel.app/)
 
---- 
+AI-powered platform for visual and content analysis with a focus on clean, harmonious experiences.
 
-## Project Structure
+[![GitHub](https://img.shields.io/badge/GitHub-black?logo=github)](https://github.com/synthara-company)
+[![React Version](https://img.shields.io/badge/React-18.2.0-blue?logo=react)](https://nodejs.org/)
+[![Join Community](https://img.shields.io/badge/community-join-blue)](https://www.linkedin.com/company/synthara-company)
 
-The project is structured as follows:
-
-- `public/`: Contains public assets and the `CHANGELOG.md` file.
-- `src/`: Contains the source code for the React application.
-- `server/`: Contains the backend server code.
-- `docs/`: Contains documentation files.
-- `CHANGELOG.md`: The changelog file.
-- `package.json`: The project's configuration file.
-- `server-package.json`: The server's configuration file.
+[![Features](https://img.shields.io/badge/features-explore-blue)](#features)
+[![Installation](https://img.shields.io/badge/installation-guide-blue)](#installation)
+[![Commands](https://img.shields.io/badge/commands-list-blue)](#commands)
+[![Project Structure](https://img.shields.io/badge/project-structure-blue)](#project-structure)
+[![Attribution](https://img.shields.io/badge/attribution-credits-blue)](#attribution)
 
 ---
+
+## Features
+
+- **AI-powered Analysis:** Create blog posts; analyze images, audio, video, and YouTube content.
+- **Llama4 Maverick Integration:** Leverage advanced AI capabilities.
+- **Voice Assistant:** Engage with voice control and intuitive interaction.
+- **Multiple Theme Support:** Enjoy a consistent, customizable UI.
+- **Extensible API:** Seamlessly integrate with content processing and Google Gemini API.
+- **Robust Server Infrastructure:** Built for scale and reliability.
+- And much more…
+
+---
+
 ## Installation
 
-To install the project, follow these steps:
-
-1. Clone the repository:
+1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/bniladridas/synthara-project.git
+   git clone https://github.com/synthara-company/synthara-project.git
    ```
 
-2. Install dependencies:
+2. **Install Dependencies:**
 
    ```bash
    npm install
    ```
 
-3. Start the development environment:
+3. **Start the Development Environment:**
 
    ```bash
    npm run dev
    ```
 
-This will start both the React frontend and the backend server.
+   > This command starts both the React frontend and the backend server concurrently.
 
 ---
-## Available Commands
 
-To run the project, use the scripts defined in the `package.json` file. These scripts handle development, production, and utility operations.
-
----
+## Commands
 
 ### Development
 
-Start the development environment (both React frontend and backend server):
+- **Start full development environment:**
 
-```bash
-npm run dev
-```
+  ```bash
+  npm run dev
+  ```
 
-Start only the React frontend:
+- **Start only the React frontend:**
 
-```bash
-npm start
-```
+  ```bash
+  npm start
+  ```
 
-Start only the development server with auto-reloading:
+- **Start only the development server with auto-reloading:**
 
-```bash
-npm run dev-server
-```
-
----
+  ```bash
+  npm run dev-server
+  ```
 
 ### Production
 
-Build the application and start the production server:
+- **Build and start the production server:**
 
-```bash
-npm run prod
-```
+  ```bash
+  npm run prod
+  ```
 
-Build the application without starting the server:
+- **Build the application without starting the server:**
 
-```bash
-npm run build
-```
+  ```bash
+  npm run build
+  ```
 
-Start only the production server:
+- **Start only the production server:**
 
-```bash
-npm run start-prod
-```
-
----
+  ```bash
+  npm run start-prod
+  ```
 
 ### Utility
 
-Update the changelog file:
+- **Update the changelog file:**
 
-```bash
-npm run update-changelog
-```
+  ```bash
+  npm run update-changelog
+  ```
 
-Kill the development or production server manually:
+- **Kill the development/production server manually:**
 
-```bash
-npm run kill-server
-```
+  ```bash
+  npm run kill-server
+  ```
 
 ---
 
-## Fixing Changelog Issues
+## Project Structure
+
+- **public/**: Contains public assets and the `CHANGELOG.md` file.
+- **src/**: Source code for the React application.
+- **server/**: Backend server code.
+- **docs/**: Documentation and guides.
+- **CHANGELOG.md**: Project changelog.
+- **package.json**: Frontend configuration.
+- **server-package.json**: Backend configuration.
+
+---
+
+## Changelog Fixes
 
 If the changelog does not display properly, follow these steps:
 
@@ -124,9 +138,7 @@ If the changelog does not display properly, follow these steps:
    npm run dev
    ```
 
-This triggers the `copy-changelog.js` script, which is configured to handle YAML front matter correctly. It then starts both the frontend and backend servers.
-
-If you are only testing the changelog component:
+For quick testing of the changelog component, simply run:
 
 ```bash
 npm start
@@ -136,4 +148,8 @@ npm start
 
 ## Attribution
 
-Some of the content and formatting suggestions in this README are generated with assistance from [ChatGPT](https://openai.com/chatgpt) by OpenAI.
+Suggestions for a cleaner, noise-free typography were generated with assistance from [ChatGPT](https://openai.com/chatgpt).
+
+---
+
+**Powered by Synthara**
