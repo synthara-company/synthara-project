@@ -1,158 +1,148 @@
-
+<a id="synthara-project"></a>
 [![Synthara OG Card](https://raw.githubusercontent.com/synthara-company/synthara-project/main/public/og-card.svg)](https://synthara-prod.vercel.app/)
 
 <h1 align="center">Synthara Project</h1>
 <h3 align="center">AI-Powered Content Analysis Platform</h3>
 
-<div align="center">
-
-[![GitHub License](https://img.shields.io/github/license/synthara-company/synthara-project?color=blue)](LICENSE)
-[![React Version](https://img.shields.io/badge/React-18.2.0-%2361DAFB?logo=react)](https://react.dev/)
-[![Node Version](https://img.shields.io/badge/Node->=18.0.0-brightgreen?logo=node.js)](https://nodejs.org/)
-[![Community](https://img.shields.io/badge/Join-LinkedIn-0077B5?logo=linkedin)](https://www.linkedin.com/company/synthara-company)
-
-</div>
-
-<div align="center" margin="20px 0">
-
-[![🚀 Features](#features)](#features)
-[![📥 Setup](#installation)](#installation)
-[![⚙️ Commands](#commands)](#commands)
-[![📁 Structure](#project-structure)](#project-structure)
-[![✨ Demo](https://img.shields.io/badge/Try-Live_Demo-brightgreen)](https://synthara-prod.vercel.app/)
-
+<div align="center" style="margin-bottom: 20px;">
+  <a href="#features"><img src="https://img.shields.io/badge/🚀_Features-Click_Here-blue" alt="Features"></a>
+  <a href="#installation"><img src="https://img.shields.io/badge/📥_Install-Click_Here-blue" alt="Installation"></a>
+  <a href="#commands"><img src="https://img.shields.io/badge/⚙️_Commands-Click_Here-blue" alt="Commands"></a>
+  <a href="#structure"><img src="https://img.shields.io/badge/📁_Structure-Click_Here-blue" alt="Structure"></a>
+  <a href="#troubleshooting"><img src="https://img.shields.io/badge/🔧_Troubleshooting-Click_Here-blue" alt="Troubleshooting"></a>
+  <a href="https://synthara-prod.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/✨_Live_Demo-Click_Here-brightgreen" alt="Demo"></a>
 </div>
 
 ---
 
-## 🚀 Features
+## <span id="features">🚀 Features</span>
 
-**Core Capabilities**
-- 🧠 Multi-modal AI Analysis (Text/Image/Audio/Video)
-- 📝 Automated Content Generation
-- 🌗 Adaptive Theme Engine (Dark/Light/Dim modes)
-- 🎙️ Voice Interface Integration
+**AI Analysis Suite**
+- 🖼️ **Image Analysis**: Object detection, OCR, and style recognition
+- 🎵 **Audio Processing**: Transcription and sentiment analysis
+- 📹 **Video Intelligence**: Frame-by-frame analysis and summarization
+- ✍️ **Content Generation**: Automated blog posts and social media content
 
-**Technical Highlights**
-- 🔄 Real-time Processing Pipeline
-- 🧩 Modular API Architecture
-- 📊 Analytics Dashboard
-- 🔒 Role-Based Access Control
+**Technical Capabilities**
+- 🔄 **Real-time Processing**: Stream analysis with WebSocket support
+- 🧩 **Modular Design**: Plug-and-play AI model integration
+- 📊 **Analytics Dashboard**: Performance metrics and usage statistics
+- 🔐 **Enterprise Security**: Role-based access control and data encryption
 
-**Integrations**
-- 🤖 Google Gemini API
-- 🦙 Llama4 Maverick
-- 📹 YouTube API
-- 🗣️ Whisper Speech-to-Text
+[↑ Back to top](#synthara-project)
 
 ---
 
-## 📥 Installation
+## <span id="installation">📥 Installation</span>
 
 **Prerequisites**
-- Node.js 18.x+
-- npm 9.x+
-- Python 3.10+ (for ML components)
+- Node.js ≥18.x
+- npm ≥9.x or yarn
+- Python 3.10+ (for ML features)
 
 **Quick Start**
 ```bash
+# Clone repository
 git clone https://github.com/synthara-company/synthara-project.git
 cd synthara-project
-npm install && npm run dev
-```
 
-**Configuration**
-```bash
-# Copy environment templates
+# Install dependencies
+npm install
+
+# Configure environment
 cp .env.example .env
 cp server/.env.example server/.env
 
-# Install Python requirements
-pip install -r requirements.txt
+# Start development server
+npm run dev
 ```
+
+**Production Deployment**
+```bash
+# Build and start production server
+npm run build
+npm run start:prod
+```
+
+[↑ Back to top](#synthara-project)
 
 ---
 
-## ⚙️ Development Commands
+## <span id="commands">⚙️ Development Commands</span>
 
 | Command                | Action                              |
 |------------------------|-------------------------------------|
-| `npm run dev`          | Start full-stack dev environment    |
-| `npm run dev:frontend` | Start React development server      |
-| `npm run dev:backend`  | Start Node.js server with nodemon   |
-| `npm run build`        | Create production build            |
-| `npm run lint`         | Run ESLint + TypeScript checker    |
-| `npm run test`         | Run Jest test suite                |
+| `npm run dev`          | Start full development environment  |
+| `npm run build`        | Create production build             |
+| `npm run test`         | Run test suite                      |
+| `npm run lint`         | Check code quality                  |
+| `npm run update:models`| Refresh AI model configurations     |
+| `npm run docs`         | Generate documentation             |
+
+[↑ Back to top](#synthara-project)
 
 ---
 
-## 📁 Project Structure
+## <span id="structure">📁 Project Structure</span>
 
 ```bash
 synthara-project/
-├── 📂 public/          # Static assets & OG resources
+├── 📂 public/          # Static assets (OG images, favicons)
 ├── 📂 src/             # React application
+│   ├── 📂 api/         # API clients and services
 │   ├── 📂 ai/          # AI integration layer
-│   ├── 📂 core/        # Business logic
-│   └── 📂 views/       # UI components
-├── 📂 server/          # Backend services
-│   ├── 📂 api/         # REST endpoints
-│   └── 📂 ml/          # Machine learning models
-├── 📂 docs/            # Technical documentation
+│   └── 📂 views/       # UI components and pages
+├── 📂 server/          # Node.js backend
+│   ├── 📂 config/      # Environment configurations
+│   └── 📂 services/    # Business logic
+├── 📂 docs/            # Documentation
 ├── 📜 .env.example     # Environment template
-└── 📜 LICENSE          # MIT License
+└── 📜 README.md        # Project documentation
 ```
+
+[↑ Back to top](#synthara-project)
 
 ---
 
-## 🛠️ Troubleshooting
+## <span id="troubleshooting">🔧 Troubleshooting</span>
 
 **Common Issues**
 
-1. **Missing Environment Variables**
+1. **Missing Dependencies**
    ```bash
-   cp .env.example .env
-   cp server/.env.example server/.env
+   npm ci  # Clean install
    ```
 
 2. **Port Conflicts**
    ```bash
-   # Free ports 3000 (frontend) and 5000 (backend)
-   npm run kill-server
+   lsof -i :3000  # Check port usage
+   kill -9 <PID>  # Free the port
    ```
 
-3. **Changelog Display**
+3. **Environment Variables**
    ```bash
-   npm run update-changelog && npm run dev
+   # Regenerate .env files
+   cp .env.example .env
+   cp server/.env.example server/.env
    ```
+
+**Support Channels**
+- [GitHub Issues](https://github.com/synthara-company/synthara-project/issues)
+- support@synthara.io
+
+[↑ Back to top](#synthara-project)
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our:
+We welcome contributions! Please see:
 - [Contribution Guide](docs/CONTRIBUTING.md)
 - [Code of Conduct](docs/CODE_OF_CONDUCT.md)
-- [Roadmap](docs/ROADMAP.md)
+- [Good First Issues](https://github.com/synthara-company/synthara-project/contribute)
 
 ---
 
-## 📜 Attribution
+## 📜 License
 
-**Core Technologies**
-- [React](https://react.dev/) - UI Framework
-- [Express](https://expressjs.com/) - Backend Server
-- [TensorFlow.js](https://www.tensorflow.org/js) - ML Runtime
-
-**Special Thanks**
-- Documentation improvements powered by [ChatGPT](https://openai.com/chatgpt)
-- UI inspiration from [MUI](https://mui.com/) and [Ant Design](https://ant.design/)
-
----
-
-<p align="center">
-  <a href="https://synthara.io">Website</a> •
-  <a href="https://docs.synthara.io">Documentation</a> •
-  <a href="mailto:support@synthara.io">Support</a> •
-  <a href="https://status.synthara.io">System Status</a>
-</p>
+MIT License © 2025 [Synthara](https://synthara-prod.vercel.app)
